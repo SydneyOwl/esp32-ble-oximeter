@@ -16,7 +16,7 @@
 
 + esp32开发板x1
 + MAX30102模块x1
-+ LuatOS 1.54" 电子墨水屏x1（或微雪1.54''墨水屏，但需要更换驱动里的针脚定义，见下文）
++ LuatOS 1.54" 电子墨水屏x1（或微雪1.54''墨水屏，未验证）
 
 ## 硬件连接
 
@@ -46,7 +46,7 @@
 | SCL    | 18          |
 | SDA    | 23          |
 
-注意：该驱动由微雪1.54寸水墨屏驱动修改而来，见：[Arduino框架下ESP32/ESP8266+合宙1.54“ 电子墨水屏（e-paper）驱动显示示例](https://blog.csdn.net/weixin_42880082/article/details/126478662)，因此理论上同样能够驱动微雪的1.54寸屏幕，只需要将代码中的针脚定义换回微雪的即可。可在微雪官方网站上查找到相关信息或下载驱动：[E-Paper ESP32 Driver Board - Waveshare Wiki](https://www.waveshare.net/wiki/E-Paper_ESP32_Driver_Board)
+注意：该驱动由微雪1.54寸水墨屏驱动修改而来，见：[Arduino框架下ESP32/ESP8266+合宙1.54“ 电子墨水屏（e-paper）驱动显示示例](https://blog.csdn.net/weixin_42880082/article/details/126478662)，因此理论上同样能够驱动微雪的1.54寸屏幕，可在微雪官方网站上查找到相关信息或下载驱动：[E-Paper ESP32 Driver Board - Waveshare Wiki](https://www.waveshare.net/wiki/E-Paper_ESP32_Driver_Board)
 
 ## 烧录
 
