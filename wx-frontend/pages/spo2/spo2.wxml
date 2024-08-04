@@ -1,0 +1,65 @@
+<view class="page">
+  <view class="navBar">
+    <block wx:for="{{tabs}}" wx:key="item">
+      <view id="{{index}}" class="navItem {{tabIndex == index ? 'active' : '' }}" bindtap="onTabClick">
+        <view class="navItemTitle">{{item}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="content_wrapper">
+    <block wx:if="{{tabIndex == 0}}">
+      <view>
+        <view id="readings">
+          <view class="subReading">
+            <span class="title">SpO₂</span>
+            <span class="num">{{latestMsg.SpO2}}%</span>
+          </view>
+          <view class="subReading">
+            <span class="title">BPM</span>
+            <span class="num">{{latestMsg.BPM}}</span>
+          </view>
+        </view>
+        <view id="cht">
+          <view class="container">
+            <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- 第二个tab -->
+    <block wx:if="{{tabIndex == 1}}">
+      <view>
+        <view class="content">编译时间：{{deviceData.compilationDate}}</view>
+        <view class="content">芯片型号：{{deviceData.chipModel}}</view>
+        <view class="content">CPU主频：{{deviceData.cpuFreqMHz}}</view>
+        <view class="content">CPU核心数：{{deviceData.chipCores}}</view>
+        <view class="content">堆内存：{{deviceData.heapSizeKiB}}KiB</view>
+        <view class="content">PSRAM空间：{{deviceData.psramSizeKiB}}KiB</view>
+        <view class="content">PSRAM剩余空间：{{deviceData.freePsramKiB}}KiB</view>
+        <view class="content">flash芯片ID：{{deviceData.flashChipId}}</view>
+        <view class="content">flash速度：{{deviceData.flashSpeedMHz}}MHz</view>
+        <view class="content">flash芯片空间：{{deviceData.flashSizeMib}}Mib</view>
+        <view class="content">固件MD5：{{deviceData.sketchMD5}}</view>
+        <view class="content">sdk版本：{{deviceData.sdkVersion}}</view>
+      </view>
+      <view id="control">
+        <button type="primary" bind:tap="tapUpdate">更新</button>
+      </view>
+    </block>
+
+    <block wx:if="{{tabIndex == 2}}">
+      <view id="settings">
+        <view class="sub">
+          <label for="interval">刷新间隔</label>
+          <input id="interval" model:value="{{updateInterval}}"/>ms
+        </view>
+        <view class="sub">
+          <label for="interval">图表数据计数</label>
+          <input id="interval" model:value="{{graphDot}}"/>个
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

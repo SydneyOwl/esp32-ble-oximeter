@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/spo2/spo2"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "PrinterOption",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "networkTimeout": {
+    "uploadFile": 1000000,
+    "downloadFile": 1000000,
+    "request": 5000,
+    "connectSocket": 10000
+  }
+}
