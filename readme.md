@@ -48,6 +48,12 @@
 
 注意：该驱动由微雪1.54寸水墨屏驱动修改而来，见：[Arduino框架下ESP32/ESP8266+合宙1.54“ 电子墨水屏（e-paper）驱动显示示例](https://blog.csdn.net/weixin_42880082/article/details/126478662)，因此理论上同样能够驱动微雪的1.54寸屏幕，只需要将代码中的针脚定义换回微雪的即可。可在微雪官方网站上查找到相关信息或下载驱动：[E-Paper ESP32 Driver Board - Waveshare Wiki](https://www.waveshare.net/wiki/E-Paper_ESP32_Driver_Board)
 
+## 烧录
+
+从release中下载产物后，按如下配置烧录即可。重启开发板后即可使用
+
+![](./img/burn.png)
+
 ## 手动编译
 
 使用vscode打开本项目，并安装PlatformIO插件，将程序下载到esp32并重启后即可使用。
